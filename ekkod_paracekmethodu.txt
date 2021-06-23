@@ -1,0 +1,11 @@
+// vadesiz hesap içerisinde kredikartborçöde mothodunun üsteünde gösterilebilir 
+public void kredikartıparacek(double  miktar,KrediKarti kredikart){
+        if (miktar<kredikart.getLimit()){
+            kredikart.setGuncelBorc(miktar);
+            
+            JOptionPane.showMessageDialog(null, "para çekme işlemi başarılı \n\n güncel kredi kart borç bilginiz"+kredikart.getGuncelBorc(), "BİLGİLENDİRME", 2);
+        
+        }else {
+            JOptionPane.showMessageDialog(null, "girdiğiniz miktar bilgisin konrtol ediniz", "uyarı", 2);
+        }
+    }

@@ -1,0 +1,66 @@
+/*
+    // ÖDEV DE BİLİRTİLEMYEN KREDİ KARTINDAN PARA ÇEKME ADLI BİR FMETHOD OLUŞTURDUM FAKAT PROJEYE DAHİL ETMEDİM SADECE KODLARI VAR 
+    private void kredikartındanPARACEKActionPerformed(java.awt.event.ActionEvent evt) {                                                      
+        // TODO add your handling code here:
+        int cevap = Integer.parseInt(JOptionPane.showInputDialog("müşteri ıd girin: "));
+        double miktar = Double.parseDouble(JOptionPane.showInputDialog("ÇEKMEK istediğiniz para miktarını girin  "));
+
+        String kartnumarasıcevap = JOptionPane.showInputDialog("musteriye ait kart numarasını girin : ");//tekrar hata veren yere götür
+        String ibancevap = JOptionPane.showInputDialog("para çekmek istediğiniz  hesabın ıban nı yazınız");//silmek ne alaka öyle kapmış
+        // int  cevap=Integer.parseInt(JOptionPane.showInputDialog("müşteri ıd girin: ")) ;
+        boolean bul = false;
+        boolean dogru = false;
+        //Musteri musteri=new Musteri(); //kontrol içinn nesne oluşturdum
+        KrediKarti kredikartı = new KrediKarti();// PARAMETRESİZ CONST  U ÇAGIRIYORUM .
+        for (int i = 0; i < musteriler.size(); i++) {
+            if (cevap == musteriler.get(i).getMusteriNumarasi()) {
+                bul = true;
+                musteriler.get(i);
+                boolean bul2 = false;
+                for (int j = 0; j < musteriler.get(i).getKrediKartları().size(); j++) {
+                    bul2 = true;
+                    if (kartnumarasıcevap.equals(musteriler.get(i).getKrediKartları().get(j).getkartNumarasi())) {
+
+                        kredikartı = musteriler.get(i).getKrediKartları().get(j);
+                        dogru = true;
+
+                        //
+                        for (int k = 0; k < musteriler.get(i).getHesaplar().size(); k++) {
+                            if (ibancevap.equals(musteriler.get(i).getHesaplar().get(k).getIban())) {
+                                if (musteriler.get(i).getHesaplar().get(k) instanceof VadesizHesap) {
+                                    VadesizHesap hesap = (VadesizHesap) musteriler.get(i).getHesaplar().get(k);
+                                    hesap.kredikartıparacek(miktar, musteriler.get(i).getKrediKartları().get(j));
+
+                                }
+                            }
+
+                        }
+
+                    }
+                }
+
+                //
+                // ****musteriler.get(i).vadesizhesaplar.
+                JOptionPane.showMessageDialog(null, kredikartı.toString() + "", "kredi kartı bilgileri", 3);
+            } else {
+                if (!dogru) {
+                    JOptionPane.showMessageDialog(null, "bu kart numarasına ait kredi kartı bulunamadı", "UYARI", 3);
+                }
+            }
+
+        }
+        if (!bul2) {
+            JOptionPane.showMessageDialog(null, "böyle bir kredi kartı bilgisi bulunamadı ", "HATA", 2);
+        }
+
+    }
+    if (!bul
+
+    
+        ) {
+            JOptionPane.showMessageDialog(null, "böyle bir musteri bulunamadı ", "HATA", 2);
+    }
+
+
+    }                                                     
+*/
